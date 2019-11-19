@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SpamAPI.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace SpamAPI
 {
@@ -21,6 +23,7 @@ namespace SpamAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddDbContext<Context>(options => options.UseMySql(Configuration["DB:ConnectionString"]));
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
