@@ -26,7 +26,7 @@
     "bootstrap": "^4.3.1",
     "caniuse-lite": "^1.0.30001010",
     "core-js": "^2.6.10",
-    "jquery": "3.4.1",
+    "jquery": "3.5.0",
     "oidc-client": "^1.9.1",
     "popper.js": "^1.16.0",
     "rxjs": "^6.5.3",
